@@ -56,6 +56,23 @@
   });
 
   // Nav.
+document.querySelectorAll('.nav_link').forEach(function(anchor) {
+      anchor.addEventListener('click', function(event) {
+        // 기본 동작(링크 이동)을 취소합니다.
+        event.preventDefault();
+
+        // 클릭된 링크의 href 속성 값을 가져옵니다.
+        var targetId = this.getAttribute('href').substring(1);
+
+        // 해당하는 ID를 가진 요소로 스크롤 또는 이동합니다.
+        var targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+
   // Bar.
   $(
     '<div id="titleBar">' +
