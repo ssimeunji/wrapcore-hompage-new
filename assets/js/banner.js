@@ -26,14 +26,14 @@ const activePagination = (index) => {
 // Make prev and next buttons.
 const handlePrev = () => {
   selected -= 1;
-  setTransition('transform 0.5s linear');
+  setTransition('transform 1s linear');
   setTranslate({ index: selected });
   if (selected < 0) {
     selected = lastIndex;
     setTimeout(() => {
       setTransition('');
       setTranslate({ index: selected });
-    }, 500);
+    }, 2000);
   }
   if (selected >= 0) activePagination(selected);
 };
@@ -41,14 +41,14 @@ const handlePrev = () => {
 const handleNext = () => {
   console.log(selected);
   selected += 1;
-  setTransition('transform 0.5s linear');
+  setTransition('transform 1s linear');
   setTranslate({ index: selected });
   if (selected > lastIndex) {
     selected = 0;
     setTimeout(() => {
       setTransition('');
       setTranslate({ index: selected });
-    }, 500);
+    }, 1000);
   }
   if (selected <= lastIndex) activePagination(selected);
 };
@@ -74,7 +74,7 @@ const makeButton = () => {
 const handlePagination = (e) => {
   if (e.target.dataset.num) {
     selected = parseInt(e.target.dataset.num);
-    setTransition('all 0.5s linear');
+    setTransition('all 1s linear');
     setTranslate({ index: selected });
     activePagination(selected);
   }
@@ -105,7 +105,7 @@ const cloneElement = () => {
 // Automatically play the slide
 const autoplayIterator = () => {
   selected += 1;
-  setTransition('all 0.5s linear');
+  setTransition('all 1s linear');
   setTranslate({ index: selected });
   if (selected > lastIndex) {
     activePagination(0);
@@ -114,8 +114,8 @@ const autoplayIterator = () => {
       selected = 0;
       setTransition('');
       setTranslate({ reset: true });
-      autoplay({ duration: 2000 });
-    }, 500);
+      autoplay({ duration: 3000 });
+    }, 1000);
   }
   if (selected <= lastIndex) activePagination(selected);
 };
@@ -128,6 +128,6 @@ const render = () => {
   makeButton();
   makePagination();
   cloneElement();
-  autoplay({ duration: 2000 });
+  autoplay({ duration: 3000 });
 };
 render();
