@@ -383,10 +383,6 @@ blockquote {
   .container {
     width: 1200px;
   }
-
-  .slide_text {
-    width: 1500px;
-  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -394,9 +390,6 @@ blockquote {
     width: 960px;
   }
 
-  .slide_text {
-    width: 1500px;
-  }
 }
 
 @media screen and (max-width: 980px) {
@@ -404,9 +397,6 @@ blockquote {
     width: 95%;
   }
 
-  .slide_text {
-    width: 1500px;
-  }
 }
 
 @media screen and (max-width: 840px) {
@@ -414,9 +404,6 @@ blockquote {
     width: 95%;
   }
 
-  .slide_text {
-    width: 1500px;
-  }
 }
 
 @media screen and (max-width: 736px) {
@@ -424,9 +411,6 @@ blockquote {
     width: 90%;
   }
 
-  .slide_text {
-    width: 1500px;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -434,9 +418,6 @@ blockquote {
     width: 100%;
   }
 
-  .slide_text {
-    width: 1500px;
-  }
 }
 
 /* Row */
@@ -2878,7 +2859,8 @@ table.default thead {
   background-image: url("../../images/banner.jpg");
   background-position: center center;
   background-size: cover;
-  height: 28em;
+  /* height: 28em; */
+  height: 58em;
   text-align: center;
   position: relative;
 }
@@ -3051,7 +3033,8 @@ table.default thead {
   /* Banner */
 
   #banner {
-    height: 24em;
+    /* height: 24em; */
+    height: 54em;
   }
 }
 
@@ -3098,7 +3081,8 @@ table.default thead {
   /* Banner */
 
   #banner {
-    height: 20em;
+    /* height: 20em; */
+    height: 50em;
   }
 
   /* Wrapper */
@@ -3215,7 +3199,8 @@ table.default thead {
   /* Banner */
 
   #banner {
-    height: 20em;
+    /* height: 20em; */
+    height: 50em;
   }
 
   #banner header h2 {
@@ -3545,7 +3530,8 @@ table.default thead {
   /* Banner */
 
   #banner {
-    height: 18em;
+    /* height: 18em; */
+    height: 48em;
   }
 
   /* Wrapper */
@@ -3599,7 +3585,8 @@ table.default thead {
   /* Banner */
 
   #banner {
-    height: 20em;
+    /* height: 20em; */
+    height: 50em;
   }
 
   #banner header {
@@ -3633,11 +3620,13 @@ table.default thead {
   height: 1000px;
 }
 .slide {
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
 
 .slide_list {
+  height: 100%;
   display: flex;
   transform: translate(0, 0);
   padding: 0 !important;
@@ -3656,19 +3645,20 @@ table.default thead {
   min-width: 900px !important;
   max-width: 1600px !important;
   position: absolute;
-  padding: 0 200px;
+  padding: 0 12.5rem;
   top: 30%;
+  text-align: left;
 }
 .slide_text p {
   font-weight: 600;
-  font-size: 50px;
-  line-height: 55px;
+  font-size: 3.125rem;
+  line-height: 3.4375rem;
   color: red;
 }
 .slide_text span {
   font-weight: 400;
-  font-size: 25px;
-  line-height: 30px;
+  /* font-size: 1.625rem; */
+  line-height: 1.875rem;
   color: #efefef;
   word-break: keep-all;
 }
@@ -3676,7 +3666,7 @@ table.default thead {
 .slide_image {
   display: block;
   width: 100%;
-  height: 1000px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -3692,8 +3682,8 @@ table.default thead {
 .slide_buttons_next {
   position: absolute;
   top: 50%;
-  width: 36px;
-  height: 36px;
+  width: 2.25rem;
+  height: 2.25rem;
   background: transparent;
   border-radius: 50%;
   transform: translateY(-50%);
@@ -3769,6 +3759,11 @@ table.default thead {
   text-align: center;
 margin-bottom: 50px;
 }
+
+.business_direction_top_box h4 {
+  word-break: keep-all;
+}
+
 .business_direction_top_box h3 span {
   color: #1F246B;
 }

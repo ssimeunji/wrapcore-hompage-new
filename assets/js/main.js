@@ -34,7 +34,10 @@
   // 헤더 높이를 동적으로 계산하여 나머지 콘텐츠의 상단 여백을 조정
   function adjustContentMargin() {
     var headerHeight = $("#header").outerHeight();
-    $(".sections").css("margin-top", headerHeight + "px");
+    var headerWidth = $("#header").outerWidth();
+    if (headerWidth >= (840)) {
+      $(".sections").css("margin-top", headerHeight);
+    }
   }
 
   // 페이지 로드 시에도 한 번 호출
@@ -44,9 +47,7 @@
   $(window).resize(function () {
     adjustContentMargin();
   });
-  
-  
-  
+    
 
   // Dropdowns.
   $("#nav > ul").dropotron({
@@ -78,7 +79,7 @@ document.querySelectorAll('.nav_link').forEach(function(anchor) {
     '<div id="titleBar">' +
       '<a href="#navPanel" class="toggle"></a>' +
       '<span class="title">' +
-      $("#logo").html() +
+      'wrapcore' +
       "</span>" +
       "</div>"
   ).appendTo($body);

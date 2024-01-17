@@ -103,31 +103,32 @@ const cloneElement = () => {
 };
 
 // Automatically play the slide
-const autoplayIterator = () => {
-  selected += 1;
-  setTransition('all 1s linear');
-  setTranslate({ index: selected });
-  if (selected > lastIndex) {
-    activePagination(0);
-    clearInterval(interval);
-    setTimeout(() => {
-      selected = 0;
-      setTransition('');
-      setTranslate({ reset: true });
-      autoplay({ duration: 3000 });
-    }, 1000);
-  }
-  if (selected <= lastIndex) activePagination(selected);
-};
+// const autoplayIterator = () => {
+//   selected += 1;
+//   setTransition('all 1s linear');
+//   setTranslate({ index: selected });
+//   if (selected > lastIndex) {
+//     activePagination(0);
+//     clearInterval(interval);
+//     setTimeout(() => {
+//       selected = 0;
+//       setTransition('');
+//       setTranslate({ reset: true });
+//       autoplay({ duration: 3000 });
+//     }, 1000);
+//   }
+//   if (selected <= lastIndex) activePagination(selected);
+// };
 
-const autoplay = ({ duration }) => {
-  interval = setInterval(autoplayIterator, duration);
-};
+// const autoplay = ({ duration }) => {
+//   interval = setInterval(autoplayIterator, duration);
+// };
+
 
 const render = () => {
   makeButton();
   makePagination();
   cloneElement();
-  autoplay({ duration: 3000 });
+  // autoplay({ duration: 3000 });
 };
 render();
