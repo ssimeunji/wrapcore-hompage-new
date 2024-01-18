@@ -1903,6 +1903,28 @@ blockquote {
 }
 
 @media screen and (max-width: 480px) {
+
+  .solution_title > p {
+    line-height: 38px;
+    word-break: keep-all;
+  }
+  .solution_title > span {
+    display: none !important;
+  }
+  .solution_title_sub {
+    display: block !important;
+    position: static !important;
+    padding: 0 0 2em 0 !important;
+  }
+
+  .map_bottom {
+    flex-direction: column;
+  }
+
+  .main_banner {
+    display: none !important;
+  }
+
   .row {
     display: flex;
     flex-wrap: wrap;
@@ -2860,7 +2882,7 @@ table.default thead {
   background-position: center center;
   background-size: cover;
   /* height: 28em; */
-  height: 58em;
+  height: 38em;
   text-align: center;
   position: relative;
 }
@@ -3034,7 +3056,7 @@ table.default thead {
 
   #banner {
     /* height: 24em; */
-    height: 54em;
+    height: 34em;
   }
 }
 
@@ -3082,7 +3104,7 @@ table.default thead {
 
   #banner {
     /* height: 20em; */
-    height: 50em;
+    height: 30em;
   }
 
   /* Wrapper */
@@ -3170,9 +3192,9 @@ table.default thead {
   /* Box */
 
   .box.highlight {
-    text-align: left;
+    /* text-align: left; */
     position: relative;
-    padding-left: 7em;
+    /* padding-left: 7em; */
   }
 
   .box.highlight i {
@@ -3200,7 +3222,7 @@ table.default thead {
 
   #banner {
     /* height: 20em; */
-    height: 50em;
+    height: 30em;
   }
 
   #banner header h2 {
@@ -3531,7 +3553,7 @@ table.default thead {
 
   #banner {
     /* height: 18em; */
-    height: 48em;
+    height: 28em;
   }
 
   /* Wrapper */
@@ -3571,7 +3593,8 @@ table.default thead {
   /* Box */
 
   .box.highlight {
-    padding-left: calc(4em + 30px);
+    /* padding-left: calc(4em + 30px); */
+    padding-left: 0;
   }
 
   .box.post .inner {
@@ -3582,11 +3605,15 @@ table.default thead {
     width: 30%;
   }
 
+  .works_info {
+    margin: 0 0 2em 0 !important;
+  }
+
   /* Banner */
 
   #banner {
     /* height: 20em; */
-    height: 50em;
+    height: 30em;
   }
 
   #banner header {
@@ -3746,6 +3773,9 @@ table.default thead {
 .company_overview_table > tbody > tr > th,
 .company_overview_table > tbody > tr > td {
   padding: 5px;
+}
+.company_overview_table > tbody > tr > th {
+  min-width: 78px;
 }
 
 .organization_chart {
